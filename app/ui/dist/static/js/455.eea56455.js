@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunktask_tracker_fe"]=self["webpackChunktask_tracker_fe"]||[]).push([[455],{455:function(n,t,e){e.r(t),e.d(t,{default:function(){return k}});var r=e(3396);const u=(0,r._)("h1",null,"Not Found",-1);function o(n,t){const e=(0,r.up)("router-link");return(0,r.wg)(),(0,r.iD)("div",null,[u,(0,r._)("p",null,[(0,r.Uk)(" Oops, we couldn't find that page. Try going "),(0,r.Wm)(e,{to:"/"},{default:(0,r.w5)((()=>[(0,r.Uk)("home")])),_:1})])])}var a=e(89);const c={},l=(0,a.Z)(c,[["render",o]]);var k=l}}]);
+//# sourceMappingURL=455.eea56455.js.map
