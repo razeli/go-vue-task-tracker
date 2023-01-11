@@ -77,7 +77,7 @@ func GetTask(id uint64) (Tasks, error) {
 func CreateTask(task Tasks) (Tasks, error) {
 
 	query := `insert into tasks(text, day,reminder) values($1, $2,$3) returning id;`
-	//fmt.Println("aaaaaaaaaaaaaaaaaaaaaa")
+
 	//d_, err := db.Exec(query, task.Text, task.Day, task.Reminder)
 
 	var id uint64

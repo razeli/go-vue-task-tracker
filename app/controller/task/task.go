@@ -2,7 +2,6 @@ package controller
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 	"strconv"
 
@@ -33,7 +32,7 @@ func GetDel(w http.ResponseWriter, r *http.Request) {
 }
 
 func GetAllTasks(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("GetAllTasks")
+	//fmt.Println("GetAllTasks")
 	/**w.Header().Set("Access-Control-Allow-Origin", "*")
 	if r.Method == http.MethodOptions {
 		return
@@ -53,7 +52,7 @@ func GetAllTasks(w http.ResponseWriter, r *http.Request) {
 
 // /api/task/{id}
 func GetTask(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("GetTask")
+	//fmt.Println("GetTask")
 	/**
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	if r.Method == http.MethodOptions {
@@ -83,7 +82,7 @@ func GetTask(w http.ResponseWriter, r *http.Request) {
 }
 
 func CreateTask(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("CreateTask")
+	//fmt.Println("CreateTask")
 	/**
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	if r.Method == http.MethodOptions {
@@ -114,7 +113,7 @@ func CreateTask(w http.ResponseWriter, r *http.Request) {
 }
 
 func UpdateTask(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("UpdateTask")
+	//fmt.Println("UpdateTask")
 	/**
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	if r.Method == http.MethodOptions {
@@ -132,7 +131,7 @@ func UpdateTask(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte(err.Error()))
 		return
 	}
-	fmt.Println(task)
+	//fmt.Println(task)
 	err = model.UpdateTask(task)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
@@ -145,7 +144,7 @@ func UpdateTask(w http.ResponseWriter, r *http.Request) {
 }
 
 func DeleteTask(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("DeleteTask")
+	//fmt.Println("DeleteTask")
 	/**
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	if r.Method == http.MethodOptions {

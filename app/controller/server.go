@@ -58,12 +58,9 @@ func initHandlers() {
 	httpFS2 := http.FileServer(http.FS(staticFS))
 	router.Handle("/static/css/", httpFS2)
 
-	fmt.Println("aaaaaaaaaaaa")
-
 	fjs, _ := fs.ReadDir(ui.StaticFiles, "dist/static/js")
 	for _, file := range fjs {
 		s := "/static/js/" + file.Name()
-		fmt.Println(s)
 
 		router.HandleFunc(s, func(w http.ResponseWriter, r *http.Request) {
 			rawFile, _ := ui.StaticFiles.ReadFile("dist" + s)
@@ -77,7 +74,6 @@ func initHandlers() {
 	fcs, _ := fs.ReadDir(ui.StaticFiles, "dist/static/css")
 	for _, file := range fcs {
 		s := "/static/css/" + file.Name()
-		fmt.Println(s)
 
 		router.HandleFunc(s, func(w http.ResponseWriter, r *http.Request) {
 			rawFile, _ := ui.StaticFiles.ReadFile("dist" + s)
